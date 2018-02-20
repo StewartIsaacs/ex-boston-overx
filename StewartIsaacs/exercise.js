@@ -11,7 +11,9 @@ exercise.load = function(salary, boston){
 
 // get salaries larger than given salary
 exercise.findBiggerSalaries = function(){
-
+    var data = exercise.salaries;
+    var dataLength = data.length;
+    var filteredSalaries = [];
     // ---------------------------------------------------
     //   YOUR CODE
     //
@@ -20,10 +22,14 @@ exercise.findBiggerSalaries = function(){
     //
     //     Example: salaries larger than 300K is 8
     // ---------------------------------------------------
-    console.log(exercise.salaries);
-    var dataLength = exercise.salaries.dataLength;
     for (var i = 0; i < dataLength; i++) {
+        var currentSal = data[i][18];
+        if (exercise.largerSalary(currentSal)){
+            // Push the current salary into the list if it's bigger
+            filteredSalaries.push(currentSal);
+        }
     }
+    return filteredSalaries;
 };
 
 // filter function
