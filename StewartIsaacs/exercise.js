@@ -20,8 +20,8 @@ exercise.findBiggerSalaries = function(){
     //
     //     Example: salaries larger than 300K is 8
     // ---------------------------------------------------
-
-    var dataLength = exercise.salaries.length;
+    console.log(exercise.salaries);
+    var dataLength = exercise.salaries.dataLength;
     for (var i = 0; i < dataLength; i++) {
     }
 };
